@@ -18,9 +18,9 @@ jobs:
       with:
         python-version: 3.9  # Use the appropriate Python version
 
-    # - name: Install dependencies
-    #   run: |
-    #     pip install -r requirements.txt
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
 
     - name: Run monitor script
       env:
