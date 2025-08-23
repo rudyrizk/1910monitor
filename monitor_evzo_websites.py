@@ -68,23 +68,19 @@ with open('log.txt', 'a') as log_file:
             if response.status_code != 200:
                 content_website_status = "DOWN"
             else:
-                # Decode the response content to handle Unicode escape sequences
                 try:
-                    # Detect encoding dynamically
-                    detected_encoding = chardet.detect(response.content)['encoding']
-                    if not detected_encoding:
-                        detected_encoding = 'utf-8'  # Fallback to utf-8 if detection fails
+                    # Attempt to parse as JSON
+                    try:
+                        decoded_text = json.loads(response.text)
+                    except json.JSONDecodeError:
+                        # If not JSON, decode Unicode escape sequences
+                        decoded_text = response.text.encode('utf-8').decode('unicode_escape')
 
-                    # Decode the content using the detected encoding
-                    decoded_text = response.content.decode(detected_encoding)
-
-                    print(f"Decoded Text: {decoded_text}")
-                    print(f"Keyword: {keyword}")
                     # Check if the keyword exists in the decoded text
                     if keyword not in decoded_text:
                         keyword_status = "NOT_FOUND"
                 except Exception as e:
-                    print(f"Error decoding response content: {e}")
+                    print(f"Error processing response content: {e}")
                     keyword_status = "NOT_FOUND"
         except requests.RequestException:
             content_website_status = "DOWN"
