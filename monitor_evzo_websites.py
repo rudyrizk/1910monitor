@@ -70,18 +70,29 @@ with open('log.txt', 'a') as log_file:
                 content_website_status = "DOWN"
             else:
                 try:
-                    # Decode the response content
-                    detected_encoding = chardet.detect(response.content)['encoding']
-                    if not detected_encoding:
-                        detected_encoding = 'utf-8'
-                    decoded_text = response.content.decode(detected_encoding)
+                    # Attempt to parse as JSON to handle escaped Unicode
+                    try:
+                        decoded_text = json.loads(response.text)
+                    except json.JSONDecodeError:
+                        # If not JSON, decode normally
+                        detected_encoding = chardet.detect(response.content)['encoding']
+                        if not detected_encoding:
+                            detected_encoding = 'utf-8'
+                        decoded_text = response.content.decode(detected_encoding)
 
-                    # Normalize both the decoded text and the keyword
+                    # If decoded_text is a dictionary (from JSON), convert it to a string
+                    if isinstance(decoded_text, dict):
+                        decoded_text = json.dumps(decoded_text, ensure_ascii=False)
+
+                    # Normalize the text
                     normalized_text = unicodedata.normalize("NFKC", decoded_text).strip().lower()
                     normalized_keyword = unicodedata.normalize("NFKC", keyword).strip().lower()
 
                     print(f"Normalized Text: {normalized_text}")
                     print(f"Normalized Keyword: {normalized_keyword}")
+                    
+                    print(f"Raw Content: {response.content}")
+                    print(f"Raw Text: {response.text}")
                     # Check if the normalized keyword exists in the normalized text
                     if normalized_keyword not in normalized_text:
                         keyword_status = "NOT_FOUND"
@@ -91,7 +102,6 @@ with open('log.txt', 'a') as log_file:
         except requests.RequestException:
             content_website_status = "DOWN"
             keyword_status = "NOT_FOUND"
-
         # Log the results on three separate lines
         log_file.write(f"{datetime.now()} - {language} - Main website: {main_website_status}\n")
         log_file.write(f"  URL: {website}\n")
