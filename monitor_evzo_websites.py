@@ -88,11 +88,12 @@ with open('log.txt', 'a') as log_file:
                     normalized_text = unicodedata.normalize("NFKC", decoded_text).strip().lower()
                     normalized_keyword = unicodedata.normalize("NFKC", keyword).strip().lower()
 
-                    print(f"Normalized Text: {normalized_text}")
-                    print(f"Normalized Keyword: {normalized_keyword}")
-                    
-                    print(f"Raw Content: {response.content}")
-                    print(f"Raw Text: {response.text}")
+                    # print(f"Normalized Text: {normalized_text}")
+                    # print(f"Normalized Keyword: {normalized_keyword}")
+
+                    # print(f"Raw Content: {response.content}")
+                    # print(f"Raw Text: {response.text}")
+
                     # Check if the normalized keyword exists in the normalized text
                     if normalized_keyword not in normalized_text:
                         keyword_status = "NOT_FOUND"
@@ -133,7 +134,7 @@ with open('log.txt', 'a') as log_file:
         <pre style="font-family: monospace;">{formatted_body}</pre>
         """
 
-        # send_email(api_key, recipient, subject, email_body_html)
+        send_email(api_key, recipient, subject, email_body_html)
         print("Email sent successfully.")
 
 # print the log.txt
