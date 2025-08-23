@@ -17,7 +17,10 @@ def send_telegram_message(bot_token, chat_id, message):
         "text": message,
         "parse_mode": "HTML"  # allows bold, italic, etc.
     }
+    print(f"Sending Telegram message to chat ID {chat_id} with content: {message}")
     response = requests.post(url, data=payload)
+    print(f"Telegram response status code: {response.status_code}")
+    print(f"Telegram response content: {response.content}")
     return response.json()
 
 def send_email(api_key, to, subject, htmlcontent):
