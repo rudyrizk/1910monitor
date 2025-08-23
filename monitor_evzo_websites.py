@@ -78,11 +78,10 @@ with open('log.txt', 'a') as log_file:
                     # Decode the content using the detected encoding
                     decoded_text = response.content.decode(detected_encoding)
 
-                    # Encode the keyword to match the detected encoding
-                    encoded_keyword = keyword.encode(detected_encoding)
-
-                    # Check if the encoded keyword exists in the response content
-                    if encoded_keyword.decode(detected_encoding) not in decoded_text:
+                    print(f"Decoded Text: {decoded_text}")
+                    print(f"Keyword: {keyword}")
+                    # Check if the keyword exists in the decoded text
+                    if keyword not in decoded_text:
                         keyword_status = "NOT_FOUND"
                 except Exception as e:
                     print(f"Error decoding response content: {e}")
@@ -122,7 +121,7 @@ with open('log.txt', 'a') as log_file:
         <pre style="font-family: monospace;">{formatted_body}</pre>
         """
 
-        send_email(api_key, recipient, subject, email_body_html)
+        # send_email(api_key, recipient, subject, email_body_html)
         print("Email sent successfully.")
 
 # print the log.txt
