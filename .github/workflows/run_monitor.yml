@@ -24,7 +24,7 @@ jobs:
 
     - name: Run monitor script
       env:
-        RECIPIENT_EMAIL: rizkrudy@yahoo.com
+        RECIPIENT_EMAIL: "rizkrudy@yahoo.com"
         BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}  # Pass API key from GitHub Secrets
       run: |
         python monitor_evzo_websites.py
