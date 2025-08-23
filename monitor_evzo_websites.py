@@ -7,6 +7,7 @@ import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 from pprint import pprint
 import os
+import chardet  # Add this import
 
 def send_email(api_key, to, subject, htmlcontent):
     url = "https://api.brevo.com/v3/smtp/email"
@@ -68,8 +69,20 @@ with open('log.txt', 'a') as log_file:
                 content_website_status = "DOWN"
             else:
                 # Decode the response content to handle Unicode escape sequences
-                decoded_text = response.content.decode('utf-8')  # Adjust encoding if necessary
-                if keyword not in decoded_text:
+                try:
+                    # Detect encoding dynamically
+                    detected_encoding = chardet.detect(response.content)['encoding']
+                    if not detected_encoding:
+                        detected_encoding = 'utf-8'  # Fallback to utf-8 if detection fails
+
+                    # Decode the content using the detected encoding
+                    decoded_text = response.content.decode(detected_encoding)
+
+                    # Check if the keyword exists in the decoded text
+                    if keyword not in decoded_text:
+                        keyword_status = "NOT_FOUND"
+                except Exception as e:
+                    print(f"Error decoding response content: {e}")
                     keyword_status = "NOT_FOUND"
         except requests.RequestException:
             content_website_status = "DOWN"
