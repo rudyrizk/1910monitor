@@ -76,6 +76,8 @@ with open('log.txt', 'a') as log_file:
                         # If not JSON, decode Unicode escape sequences
                         decoded_text = response.text.encode('utf-8').decode('unicode_escape')
 
+                    print(f"Decoded Text: {decoded_text}")
+                    print(f"Keyword: {keyword}")
                     # Check if the keyword exists in the decoded text
                     if keyword not in decoded_text:
                         keyword_status = "NOT_FOUND"
