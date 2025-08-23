@@ -10,5 +10,173 @@
         "website": "https://alingilalyawmi.org/MAA/gospel",
         "contentWebsite": "https://publication.evangelizo.ws/MAA/days/yyyy-mm-dd?from=gospelComponent",
         "keyword": "إنجيل القدّيس"
+    },
+    {
+        "language": "TRA",
+        "website": "https://dailygospel.org/TRA/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/TRA/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Holy Gospel according to"
+    },
+    {
+        "language": "MAE",
+        "website": "https://dailygospel.org/MAE/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/MAE/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Holy Gospel of Jesus Christ according to"
+    },
+    {
+        "language": "BYE",
+        "website": "https://dailygospel.org/BYE/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/BYE/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Holy Gospel of Jesus Christ according to"
+    },
+    {
+        "language": "SYE",
+        "website": "https://dailygospel.org/SYE/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/SYE/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Holy Gospel of Jesus Christ according to"
+    },
+    {
+        "language": "FR",
+        "website": "https://levangileauquotidien.org/FR/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/FR/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Évangile de Jésus-Christ selon"
+    },
+    {
+        "language": "TRF",
+        "website": "https://levangileauquotidien.org/TRF/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/TRF/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Évangile selon"
+    },
+    {
+        "language": "MAF",
+        "website": "https://levangileauquotidien.org/MAF/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/MAF/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Évangile de Jésus-Christ selon"
+    },
+    {
+        "language": "IT",
+        "website": "https://vangelodelgiorno.org/IT/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/IT/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Dal Vangelo di Gesù Cristo"
+    },
+    {
+        "language": "MI",
+        "website": "https://vangelodelgiorno.org/MI/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/MI/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Dal Vangelo di Gesù Cristo"
+    },
+    {
+        "language": "BYA",
+        "website": "https://alingilalyawmi.org/BYA/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/BYA/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "إنجيل القدّيس"
+    },
+    {
+        "language": "AR",
+        "website": "https://alingilalyawmi.org/AR/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/AR/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "إنجيل القدّيس"
+    },
+    {
+        "language": "COA",
+        "website": "https://alingilalyawmi.org/COA/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/COA/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "إنجيل القدّيس"
+    },
+    {
+        "language": "SYA",
+        "website": "https://alingilalyawmi.org/SYA/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/SYA/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "إنجيل القدّيس"
+    },
+    {
+        "language": "CHA",
+        "website": "https://alingilalyawmi.org/CHA/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/CHA/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "إنجيل القدّيس"
+    },
+    {
+        "language": "SP",
+        "website": "https://evangeliodeldia.org/SP/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/SP/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Evangelio según"
+    },
+    {
+        "language": "NL",
+        "website": "https://dagelijksevangelie.org/NL/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/NL/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Uit het heilig Evangelie van onze Heer Jezus Christus"
+    },
+    {
+        "language": "PT",
+        "website": "https://evangelhoquotidiano.org/PT/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/PT/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Evangelho segundo"
+    },
+    {
+        "language": "PL",
+        "website": "https://ewangelia.org/PL/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/PL/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Ewangelia wg"
+    },
+    {
+        "language": "TR",
+        "website": "https://herguneincil.org/TR/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/TR/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Tarafından Yazılan Mesih İsa'nın İncili'nden Sözler"
+    },
+    {
+        "language": "GA",
+        "website": "https://soiscealanlae.org/GA/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/GA/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Soiscéal Naofa Íosa Críost"
+    },
+    {
+        "language": "DE",
+        "website": "https://evangeliumtagfuertag.org/DE/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/DE/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Aus dem Heiligen Evangelium"
+    },
+    {
+        "language": "ARM",
+        "website": "https://aroriaavedarane.org/ARM/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/ARM/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Աւետարանիչին գրած"
+    },
+    {
+        "language": "GR",
+        "website": "https://evaggeliokathemera.org/GR/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/GR/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Κατά Αγιο Ευαγγέλιο"
+    },
+    {
+        "language": "MG",
+        "website": "https://evanjelyanio.org/MG/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/MG/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Evanjely Masin'i Jesoa Kristy nosoratan'i"
+    },
+    {
+        "language": "HE",
+        "website": "https://habsurahayomit.org/HE/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/HE/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "הבשורה על-פי"
+    },
+    {
+        "language": "RU",
+        "website": "https://evangeliedenzadnem.org/RU/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/RU/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Святое Евангелие от"
+    },
+    {
+        "language": "KR",
+        "website": "https://maeilbogum.org/KR/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/KR/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "시편"
+    },
+    {
+        "language": "CN",
+        "website": "https://meirifuyin.org/CN/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/CN/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "福音"
     }
 ]

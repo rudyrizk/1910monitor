@@ -1,3 +1,4 @@
+import time
 import requests
 import json
 from datetime import datetime
@@ -130,6 +131,9 @@ with open('log.txt', 'a') as log_file:
             email_body += f"  Readings endpoint: {content_website_status} (URL: {content_website})\n"
             email_body += f"  Gospel content: {keyword_status}\n\n"
 
+        # sleep for 2 seconds
+        time.sleep(5)
+        
     # If there are any issues, send an email notification
     if email_body:
         api_key = os.getenv('BREVO_API_KEY')
