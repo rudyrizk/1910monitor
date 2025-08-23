@@ -8,6 +8,7 @@ from sib_api_v3_sdk.rest import ApiException
 from pprint import pprint
 import os
 import chardet  # Add this import
+import unicodedata
 
 def send_email(api_key, to, subject, htmlcontent):
     url = "https://api.brevo.com/v3/smtp/email"
