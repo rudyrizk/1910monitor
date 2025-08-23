@@ -69,17 +69,20 @@ with open('log.txt', 'a') as log_file:
                 content_website_status = "DOWN"
             else:
                 try:
-                    # Attempt to parse as JSON
-                    try:
-                        decoded_text = json.loads(response.text)
-                    except json.JSONDecodeError:
-                        # If not JSON, decode Unicode escape sequences
-                        decoded_text = response.text.encode('utf-8').decode('unicode_escape')
+                    # Decode the response content
+                    detected_encoding = chardet.detect(response.content)['encoding']
+                    if not detected_encoding:
+                        detected_encoding = 'utf-8'
+                    decoded_text = response.content.decode(detected_encoding)
 
-                    print(f"Decoded Text: {decoded_text}")
-                    print(f"Keyword: {keyword}")
-                    # Check if the keyword exists in the decoded text
-                    if keyword not in decoded_text:
+                    # Normalize both the decoded text and the keyword
+                    normalized_text = unicodedata.normalize("NFKC", decoded_text).strip().lower()
+                    normalized_keyword = unicodedata.normalize("NFKC", keyword).strip().lower()
+
+                    print(f"Normalized Text: {normalized_text}")
+                    print(f"Normalized Keyword: {normalized_keyword}")
+                    # Check if the normalized keyword exists in the normalized text
+                    if normalized_keyword not in normalized_text:
                         keyword_status = "NOT_FOUND"
                 except Exception as e:
                     print(f"Error processing response content: {e}")
