@@ -1,0 +1,14 @@
+[
+    {
+        "language": "AM",
+        "website": "https://dailygospel.org/AM/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/AM/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "Holy Gospel of Jesus Christ according to"
+    },
+    {
+        "language": "MAA",
+        "website": "https://alingilalyawmi.org/MAA/gospel",
+        "contentWebsite": "https://publication.evangelizo.ws/MAA/days/yyyy-mm-dd?from=gospelComponent",
+        "keyword": "إنجيل القدّيس"
+    }
+]
