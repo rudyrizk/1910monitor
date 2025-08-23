@@ -21,8 +21,12 @@ def send_email(api_key, to, subject, htmlcontent):
         "subject": subject,
         "htmlContent": htmlcontent
     }
-    
+    print(f"Sending email to {to} with subject: {subject}")
+    print(f"Email content: {htmlcontent}")
+    # Send the email using Brevo API
     response = requests.post(url, headers=headers, json=payload)
+    print(f"Response status code: {response.status_code}")
+    print(f"Response content: {response.content}")
     return response.status_code, response.json()
 
 # Load configuration from file
@@ -93,6 +97,7 @@ with open('log.txt', 'a') as log_file:
 
         # The rest of the script remains unchanged
         recipient = os.getenv('RECIPIENT_EMAIL')
+        print(f"Sending email to {recipient}...")
         subject = "[ALERT] Daily Gospel Websites Monitoring Alert"
         formatted_body = email_body.replace("\n", "<br>")
 
