@@ -153,7 +153,7 @@ with open('log.txt', 'a') as log_file:
         BOT_TOKEN = os.getenv('TG_API_KEY')
         CHAT_ID = os.getenv('TG_CHAT_ID') # your chat or group ID
         
-        result = send_telegram_message(BOT_TOKEN, CHAT_ID, email_body_html)
+        result = send_telegram_message(BOT_TOKEN, CHAT_ID, email_body)
         print(result)
 # print the log.txt
 with open('log.txt', 'r') as log_file:
