@@ -24,7 +24,9 @@ jobs:
 
     - name: Run monitor script
       env:
+        TG_CHAT_ID: "7862790706"
         RECIPIENT_EMAIL: "rzk.rud@gmail.com"
         BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}  # Pass API key from GitHub Secrets
+        TG_API_KEY: ${{ secrets.TG_API_KEY }}
       run: |
         python monitor_evzo_websites.py

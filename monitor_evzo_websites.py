@@ -10,6 +10,16 @@ import os
 import chardet  # Add this import
 import unicodedata
 
+def send_telegram_message(bot_token, chat_id, message):
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    payload = {
+        "chat_id": chat_id,
+        "text": message,
+        "parse_mode": "HTML"  # allows bold, italic, etc.
+    }
+    response = requests.post(url, data=payload)
+    return response.json()
+
 def send_email(api_key, to, subject, htmlcontent):
     url = "https://api.brevo.com/v3/smtp/email"
     headers = {
@@ -134,9 +144,14 @@ with open('log.txt', 'a') as log_file:
         <pre style="font-family: monospace;">{formatted_body}</pre>
         """
 
-        send_email(api_key, recipient, subject, email_body_html)
-        print("Email sent successfully.")
+        # send_email(api_key, recipient, subject, email_body_html)
+        # print("Email sent successfully.")
 
+        BOT_TOKEN = os.getenv('TG_API_KEY')
+        CHAT_ID = os.getenv('TG_CHAT_ID') # your chat or group ID
+        
+        result = send_telegram_message(BOT_TOKEN, CHAT_ID, email_body_html)
+        print(result)
 # print the log.txt
 with open('log.txt', 'r') as log_file:
     log_content = log_file.read()
