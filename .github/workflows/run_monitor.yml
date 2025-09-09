@@ -24,8 +24,8 @@ jobs:
 
     - name: Run monitor script
       env:
-        TG_CHAT_ID: "7862790706"
-        RECIPIENT_EMAIL: "rzk.rud@gmail.com"
+        TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        RECIPIENT_EMAIL: "miaw.miaw@gmail.com"
         BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}  # Pass API key from GitHub Secrets
         TG_API_KEY: ${{ secrets.TG_API_KEY }}
       run: |
