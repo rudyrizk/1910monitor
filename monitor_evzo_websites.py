@@ -32,7 +32,7 @@ def send_email(api_key, to, subject, htmlcontent):
         "content-type": "application/json"
     }
     payload = {
-        "sender": {"name": "Website Monitor", "email": "rzk.rud@gmail.com"},
+        "sender": {"name": "Website Monitor", "email": "miaw.miaw@gmail.com"},
         "to": [{"email": to, "name": "Recipient"}],
         "subject": subject,
         "htmlContent": htmlcontent
